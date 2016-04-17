@@ -16,12 +16,12 @@ npm install
 ### Useful commands (that can be runned using npm)
 I've created a set of useful scripts for general purpose
 
-Creates web directory (for the simple purpose that by default the web directory is set in .gitignore file)
+Creates web directory (by default the web directory is set on ignore)
 ```sh
 npm run web:create
 ```
 
-It copies assets file into web directory using a symlink
+It copies assets files into web directory using a symlink
 ```sh
 npm run assets:install
 ```
@@ -32,7 +32,7 @@ npm run assets:clear
 ```
 
 ### Observations
-If you want to execute command npm run assets:install you should first create the web directory (using npm run web:create).
+If you want to execute command **npm run assets:install** you should first create the web directory (using **npm run web:create**).
 
 
 ### Known issues
