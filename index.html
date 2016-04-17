@@ -3,10 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Open feedback</title>
+    <link rel="stylesheet" type="text/css" href="web/photon/css/main_style.min.css">
   </head>
   <body>
-    <div id="container"></div>
-    <div id="routing"></div>
+    <div class="main-container" id="main-container">
+      <div class="main-container-inner">
+          <!-- CONTENT:Start -->
+          <div class="main-content">
+              <div class="page-content" id="page_content">
+              </div>
+          </div>
+        </div>
+      </div>
   </body>
   <!-- React CDN -->
   <script src="https://fb.me/react-15.0.1.js"></script>
@@ -14,8 +22,6 @@
   <script src="https://npmcdn.com/react-router/umd/ReactRouter.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
 
-  <!-- React Application -->
-  <script type="text/babel" src="web/assets/js/routing.js">
-
-  </script>
+  <!-- React routing -->
+  <script type="text/babel" src="web/assets/js/routing.js"></script>
 </html>

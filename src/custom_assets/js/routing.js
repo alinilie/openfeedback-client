@@ -1,80 +1,46 @@
 var { Router, Route, IndexRoute, Link, browserHistory } = ReactRouter
 
-var MainLayout = React.createClass({
+var LoginLayout = React.createClass({
 render: function() {
   return (
-    <div className="app">
-      <header className="primary-header"></header>
-      <aside className="primary-aside">
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/users">Users</Link></li>
-          <li><Link to="/widgets">Widgets</Link></li>
-        </ul>
-      </aside>
-      <main>
-        {this.props.children}
-      </main>
+    <div id="login_box" className="auth-box">
+        <div className="panel panel-default">
+            <div className="panel-body">
+                <h1 className="auth-title">Sign into your account</h1>
+                <form id="user_auth">
+                    <div className="form-group">
+                        <label for="user_username" className="control-label">Username</label>
+                        <input type="text" id="user_username" name="user_username" className="form-control" placeholder="Ex.: florin.piersic" />
+                    </div>
+                    <div className="form-group">
+                        <label for="user_password" className="control-label">Password</label>
+                        <input type="password" id="user_password" name="user_password" className="form-control" placeholder="Your A.D. password" />
+                    </div>
+                    <div className="form-group">
+                        <div className="checkbox">
+                            <label>
+                                <input id="user_reminder" name="user_reminder" type="checkbox"/> Keep me signed in
+                            </label>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-xs-12">
+                            <div className="pull-right panel-controls">
+                                <a href="/examples/overview.php" id="special_submit" className="btn btn-primary"><i className="fa fa-check"></i><span>Sign in</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
     )
 }
 })
 
-var Home = React.createClass({
-  render: function() {
-    return (<h1>Home Page</h1>)
-  }
-})
-
-var SearchLayout = React.createClass({
-  render: function() {
-    return (
-      <div className="search">
-        <header className="search-header"></header>
-        <div className="results">
-          {this.props.children}
-        </div>
-        <div className="search-footer pagination"></div>
-      </div>
-      )
-  }
-})
-
-var UserList = React.createClass({
-render: function() {
-  return (
-    <ul className="user-list">
-      <li>Dan</li>
-      <li>Ryan</li>
-      <li>Michael</li>
-    </ul>
-    )
-}
-})
-
-  var WidgetList = React.createClass({
-    render: function() {
-      return (
-        <ul className="widget-list">
-          <li>Widget 1</li>
-          <li>Widget 2</li>
-          <li>Widget 3</li>
-        </ul>
-        )
-    }
-  })
-
-  // Note that with how CodePen works, I wasn't able to get the browserHistory to work
-  // as the article suggests. The demo works without it, but you'll want to be sure to
-  // use it in a real application
-  ReactDOM.render((
-    <Router>
-      <Route path="/" component={MainLayout}>
-        <IndexRoute component={Home} />
-        <Route component={SearchLayout}>
-          <Route path="users" component={UserList} />
-          <Route path="widgets" component={WidgetList} />
-        </Route>
-      </Route>
-    </Router>
-  ), document.getElementById('routing'))
+ReactDOM.render((
+  <Router>
+    <Route path="/" component={LoginLayout}>
+    </Route>
+  </Router>
+), document.getElementById('page_content'))
