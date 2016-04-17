@@ -6,7 +6,6 @@
   "devDependencies": {},
   "scripts": {
     "postinstall": "npm run web:create && npm run assets:install",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "assets:clear": "node app/clearAssetsSymlinks.js",
     "assets:install": "node app/installAssets.js",
     "web:create": "node app/createWebDirectory.js"
