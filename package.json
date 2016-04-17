@@ -1,0 +1,33 @@
+{
+  "name": "openfeedback-client",
+  "version": "0.1.0",
+  "description": "OpenFeedback App using React",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "postinstall": "npm run web:create && npm run assets:install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "assets:clear": "node app/clearAssetsSymlinks.js",
+    "assets:install": "node app/installAssets.js",
+    "web:create": "node app/createWebDirectory.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alinilie/openfeedback-client.git"
+  },
+  "keywords": [
+    "openfeedback"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alinilie/openfeedback-client/issues"
+  },
+  "homepage": "https://github.com/alinilie/openfeedback-client#readme",
+  "dependencies": {
+    "install": "^0.6.1",
+    "npm": "^3.8.6",
+    "photon-power-ui-kit": "git+ssh://git@github.com/eMAGTechLabs/PhotonPowerUIKit.git",
+    "react-router": "^2.2.4"
+  }
+}
