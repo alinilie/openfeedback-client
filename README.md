@@ -38,5 +38,20 @@ If you want to execute command **npm run assets:install** you should first creat
 ### Known issues
 * “Cross origin requests are only supported for HTTP.” - this appears when we use index.html without a vhost. We recommend you to create a vhost
 
+### Example of vhost
+```sh
+<VirtualHost *:80>
+    ServerAdmin user@test.com
+    ServerName open-feedback.com
+    ServerAlias www.open-feedback.com
+    DocumentRoot <path_to_application>
+    ErrorLog <path_to_error_log>
+    CustomLog <path_to_error_log>
+    <Directory <path_to_application> >
+     Require all granted
+    </Directory>
+</VirtualHost>
+```
+
 ### License
 MIT
