@@ -1,6 +1,7 @@
 # Openfeedback client
 
 This is a simple feedback application integrated with photon-power-ui-kit and React.js which will communicate with a Symfony API
+The purpose is to create an open-source platform for feedback using a meaningful and pleasant design.
 
 ### Installation steps
 You should check if you have node.js installed if not download it from here https://nodejs.org/en/
