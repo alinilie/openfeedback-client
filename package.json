@@ -22,6 +22,13 @@
   "bugs": {
     "url": "https://github.com/alinilie/openfeedback-client/issues"
   },
+  "directories": {
+    "web": "web",
+    "photonSourceDir": "node_modules/photon-power-ui-kit/dist",
+    "photonTargetDir": "web/photon",
+    "assetsSourceDir": "src/custom_assets",
+    "assetsTargetDir": "web/assets"
+  },
   "homepage": "https://github.com/alinilie/openfeedback-client#readme",
   "dependencies": {
     "install": "^0.6.1",

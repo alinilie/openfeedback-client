@@ -1,7 +1,11 @@
 //The purpose of this file is to clear web assets
 var fs = require('fs');
-var photonWebDir = __dirname + '/../web/photon';
-var srcWebDir = __dirname + '/../web/assets';
+
+const packageJsonDirectories = require('.././package.json').directories;
+
+const appDirectory = __dirname + '/../';
+const photonTargetDir = appDirectory + packageJsonDirectories.photonTargetDir;
+const assetsTargetDir = appDirectory + packageJsonDirectories.assetsTargetDir;
 
 //Remove web content
 fs.unlink(photonWebDir, function(){});
