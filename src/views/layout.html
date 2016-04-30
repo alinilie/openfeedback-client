@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %} Open feedback {% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="photon/css/main_style.min.css">
+  </head>
+  <body>
+    <div class="main-container" id="main-container">
+      <div class="main-container-inner">
+          <!-- CONTENT:Start -->
+          <div class="main-content">
+              <div class="page-content" id="page_content">{% block pageContent %}{% endblock %}</div>
+          </div>
+        </div>
+      </div>
+  </body>
+  <!-- React CDN -->
+  <script src="https://fb.me/react-15.0.1.js"></script>
+  <script src="https://fb.me/react-dom-15.0.1.js"></script>
+  {% block customScripts %}{% endblock %}
+</html>

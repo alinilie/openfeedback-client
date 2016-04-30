@@ -2,7 +2,7 @@
   "name": "openfeedback-client",
   "version": "0.1.0",
   "description": "OpenFeedback App using React",
-  "main": "index.js",
+  "main": "server.js",
   "devDependencies": {},
   "scripts": {
     "postinstall": "npm run web:create && npm run assets:install",
@@ -31,6 +31,17 @@
   },
   "homepage": "https://github.com/alinilie/openfeedback-client#readme",
   "dependencies": {
-    "photon-power-ui-kit": "git+ssh://git@github.com/eMAGTechLabs/PhotonPowerUIKit.git"
+    "babel": "^6.5.2",
+    "babel-core": "^6.7.7",
+    "babel-plugin-transform-react-jsx": "^6.7.5",
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "express": "^4.13.4",
+    "photon-power-ui-kit": "git+ssh://git@github.com/eMAGTechLabs/PhotonPowerUIKit.git",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "reactify": "^1.1.1",
+    "swig": "^1.4.2"
   }
 }

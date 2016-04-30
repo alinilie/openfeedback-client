@@ -8,6 +8,6 @@ const photonTargetDir = appDirectory + packageJsonDirectories.photonTargetDir;
 const assetsTargetDir = appDirectory + packageJsonDirectories.assetsTargetDir;
 
 //Remove web content
-fs.unlink(photonWebDir, function(){});
-fs.unlink(srcWebDir, function(){});
+fs.unlink(photonTargetDir, function(){});
+fs.unlink(assetsTargetDir, function(){});
 console.log('Symlinks were cleared!');
