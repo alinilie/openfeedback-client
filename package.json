@@ -5,10 +5,11 @@
   "main": "server.js",
   "devDependencies": {},
   "scripts": {
-    "postinstall": "npm run web:create && npm run assets:install",
+    "postinstall": "npm run web:create && npm run assets:install && npm run browserify:info",
     "assets:clear": "node app/clearAssetsSymlinks.js",
     "assets:install": "node app/installAssets.js",
-    "web:create": "node app/createWebDirectory.js"
+    "web:create": "node app/createWebDirectory.js",
+    "browserify:info": "node app/createBrowserifyAliasInfo.js"
   },
   "repository": {
     "type": "git",
@@ -36,7 +37,7 @@
     "babel-plugin-transform-react-jsx": "^6.7.5",
     "babel-preset-react": "^6.5.0",
     "babelify": "^7.2.0",
-    "browserify": "^13.0.0",
+    "colors": "^1.1.2",
     "express": "^4.13.4",
     "photon-power-ui-kit": "git+ssh://git@github.com/eMAGTechLabs/PhotonPowerUIKit.git",
     "react": "^15.0.1",

@@ -21,7 +21,7 @@ swig.setDefaults({ cache: false });
 app.set('views', __dirname + '/src/views');
 
 // ---------------------- Layouts ----------------------
-var LoginLayout = React.createFactory(require('./src/custom_assets/js/loginLayout.jsx').LoginLayout);
+var LoginLayout = React.createFactory(require('./src/custom_assets/js/react_pages/server/login.jsx').LoginLayout);
 
 // ---------------------- General routes ----------------------
 app.get('/login', function(req, res) {
