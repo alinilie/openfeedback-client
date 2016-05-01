@@ -39,7 +39,12 @@ After installation script will be runned the project will have the following str
 * **node_modules** - node modules
 
 ### Observations
-If you want to execute command **npm run assets:install** you should first create the web directory (using **npm run web:create** - in the case that web directory is created you should skip this step).
+* If you want to execute command **npm run assets:install** you should first create the web directory (using **npm run web:create** - in the case that web directory is created you should skip this step).
+
+* In order to generate the client part for react you need to use browserify (which you should install it globally for being able to have access to command). The new generated file should be included in src/js/react_pages/client folder. Example of command with browserify:
+```
+browserify -t reactify src/custom_assets/js/react_pages/loginMain.js -o src/custom_assets/js/react_pages/client/login.js
+```
 
 
 ### Known issues
