@@ -14,6 +14,12 @@ Install dependencies
 ```sh
 npm install
 ```
+
+Install browserify globally
+```sh
+npm install -g browserify
+```
+
 ### Useful commands (that can be runned using npm)
 I've created a set of useful scripts for general purpose
 
